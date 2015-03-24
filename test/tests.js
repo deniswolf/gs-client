@@ -13,6 +13,33 @@ var user1 = {
 
 describe('User Search', function() {
 
+	describe('Error cases', function() {
+		it('should get 404 in case of improper resource request', function(done) {
+			var wrong_path = 'wrong_path';
+			search(wrong_path, {
+					id: 0
+				})
+				.then(function(result) {
+					done('had to emit 404');
+				})
+				.catch(function(err) {
+					expect(err.statusCode).to.equal(404);
+					done();
+				});
+		});
+		it('should get 400 in case of improper params requested', function(done) {
+			search(path, {})
+				.then(function(result) {
+					done('had to emit 400');
+				})
+				.catch(function(err) {
+					expect(err.statusCode).to.equal(400);
+					done();
+				});
+		});
+
+	});
+
 	describe('By ID', function() {
 		it('can find a user', function(done) {
 			var params = {
