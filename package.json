@@ -1,0 +1,11 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "POC client for GS Search API task",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Denis Wolf",
+  "license": "ISC"
+}
