@@ -7,5 +7,12 @@
     "test": "mocha"
   },
   "author": "Denis Wolf",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.9.14",
+    "chai": "^2.1.2",
+    "mocha": "^2.2.1",
+    "request-promise": "^0.4.1",
+    "superagent": "^1.1.0"
+  }
 }
