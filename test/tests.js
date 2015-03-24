@@ -25,7 +25,7 @@ describe('User Search', function() {
           expect(result).to.deepEqual(users);
           done();
         })
-        .reject(done);
+        .catch(done);
     });
   });
 
@@ -41,7 +41,7 @@ describe('User Search', function() {
           expect(result).to.deepEqual(users);
           done();
         })
-        .reject(done);
+        .catch(done);
     });
   });
 
@@ -57,7 +57,7 @@ describe('User Search', function() {
           expect(result).to.deepEqual(users);
           done();
         })
-        .reject(done);
+        .catch(done);
     });
   });
 
@@ -73,7 +73,7 @@ describe('User Search', function() {
           expect(result).to.deepEqual(users);
           done();
         })
-        .reject(done);
+        .catch(done);
     });
   });
 
