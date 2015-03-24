@@ -4,7 +4,7 @@
   "description": "POC client for GS Search API task",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "source .env && mocha test"
   },
   "author": "Denis Wolf",
   "license": "ISC",
