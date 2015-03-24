@@ -5,6 +5,7 @@ module.exports.search = function(path, params) {
 	return request({
 		uri: URI + path,
 		method: 'GET',
+		json: true,
 		qs: params
 	});
 };

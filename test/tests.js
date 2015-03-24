@@ -63,8 +63,7 @@ describe('User Search', function() {
 
 			search(path, params)
 				.then(function(result) {
-					var json = JSON.parse(result);
-					expect(json).to.deep.equal(users);
+					expect(result).to.deep.equal(users);
 					done();
 				})
 				.catch(done);
@@ -80,8 +79,7 @@ describe('User Search', function() {
 
 			search(path, params)
 				.then(function(result) {
-					var json = JSON.parse(result);
-					expect(json).to.deep.equal(users);
+					expect(result).to.deep.equal(users);
 					done();
 				})
 				.catch(done);
@@ -97,8 +95,7 @@ describe('User Search', function() {
 
 			search(path, params)
 				.then(function(result) {
-					var json = JSON.parse(result);
-					expect(json).to.deep.equal(users);
+					expect(result).to.deep.equal(users);
 					done();
 				})
 				.catch(done);
@@ -112,8 +109,7 @@ describe('User Search', function() {
 
 			search(path, params)
 				.then(function(result) {
-					var json = JSON.parse(result);
-					expect(json).to.deep.equal(users);
+					expect(result).to.deep.equal(users);
 					done();
 				})
 				.catch(done);
@@ -129,12 +125,12 @@ describe('User Search', function() {
 
 			search(path, params)
 				.then(function(result) {
-					var json = JSON.parse(result);
-					expect(json).to.deep.equal(users);
+					expect(result).to.deep.equal(users);
 					done();
 				})
 				.catch(done);
 		});
+
 		it('can find multiple users', function(done) {
 			var params = {
 				created_at: user2.created_at
@@ -143,8 +139,7 @@ describe('User Search', function() {
 
 			search(path, params)
 				.then(function(result) {
-					var json = JSON.parse(result);
-					expect(json).to.deep.equal(users);
+					expect(result).to.deep.equal(users);
 					done();
 				})
 				.catch(done);
