@@ -1,6 +1,6 @@
 var search = require('../index').search;
 var expect = require('chai').expect;
-var path = 'users.json';
+var path = process.env.ENDPOINT;
 
 // fixtures
 
@@ -29,7 +29,7 @@ describe('User Search', function() {
 
 	describe('Error cases', function() {
 		it('should get 404 in case of improper resource request', function(done) {
-			var wrong_path = 'wrong_path';
+			var wrong_path = 'http://localhost:80/wrong_path';
 			search(wrong_path, {
 					id: 0
 				})

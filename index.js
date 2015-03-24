@@ -1,9 +1,7 @@
 var request = require('request-promise');
-var URI = process.env.ENDPOINT;
-
-module.exports.search = function(path, params) {
+module.exports.search = function(url, params) {
 	return request({
-		uri: URI + path,
+		uri: url,
 		method: 'GET',
 		json: true,
 		qs: params
