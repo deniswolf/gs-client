@@ -11,6 +11,20 @@ var user1 = {
 	created_at: '2015/03/24'
 };
 
+var user2 = {
+	id: '321',
+	name: 'Second User',
+	role: 'user',
+	created_at: '2015/04/01'
+};
+
+var user3 = {
+	id: '555',
+	name: 'Third User',
+	role: 'user',
+	created_at: '2015/04/01'
+};
+
 describe('User Search', function() {
 
 	describe('Error cases', function() {
@@ -89,6 +103,21 @@ describe('User Search', function() {
 				})
 				.catch(done);
 		});
+
+		it('can find multiple users', function(done) {
+			var params = {
+				role: user2.role
+			};
+			var users = [user2].concat(user3);
+
+			search(path, params)
+				.then(function(result) {
+					var json = JSON.parse(result);
+					expect(json).to.deep.equal(users);
+					done();
+				})
+				.catch(done);
+		});
 	});
 
 	describe('By Creation Date', function() {
@@ -97,6 +126,20 @@ describe('User Search', function() {
 				created_at: user1.created_at
 			};
 			var users = [user1];
+
+			search(path, params)
+				.then(function(result) {
+					var json = JSON.parse(result);
+					expect(json).to.deep.equal(users);
+					done();
+				})
+				.catch(done);
+		});
+		it('can find multiple users', function(done) {
+			var params = {
+				created_at: user2.created_at
+			};
+			var users = [user2].concat(user3);
 
 			search(path, params)
 				.then(function(result) {
